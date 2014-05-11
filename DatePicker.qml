@@ -65,7 +65,7 @@ Item {
         x: 0
         y: 0
         width: parent.width
-        height:parent.height
+        height: parent.height
 
         clip: true
 
@@ -116,40 +116,31 @@ Item {
 
                 height: 65
 
-                Item {
-                    id: leftArrow
 
+
+                DatePickerArrow {
+                    id: leftArrow
+                    arrowtype: 'leftarrow'
                     anchors {
                         left: parent.left
                         top: parent.top
                         bottom: parent.bottom
+                        margins: 5
+                        verticalCenter: parent.Center
                     }
 
-                    width: 100
+                    width: 20
                     height: 65
-
-                    Image {
-                        id: leftArrowImage
-
-                        anchors {
-                            left: parent.left
-                            leftMargin: (header.width / 7) / 2 - (width / 2)
-                            verticalCenter: parent.verticalCenter
-                        }
-
-                        width: height
-                        source: root.platformStyle.leftArrowImage
-                    }
 
                     MouseArea {
                         anchors.fill: parent
 
                         onPressed: {
-                            leftArrowImage.source = root.platformStyle.leftArrowPressedImage
+                            //leftArrowImage.source = root.platformStyle.leftArrowPressedImage
                         }
 
                         onReleased: {
-                            leftArrowImage.source = root.platformStyle.leftArrowImage
+                            //leftArrowImage.source = root.platformStyle.leftArrowImage
                             previousMonthAnimation.start()
                             dateModel.showPrevious()
                         }
@@ -164,39 +155,29 @@ Item {
                     color: root.platformStyle.monthColor
                 }
 
-                Item {
+                DatePickerArrow {
                     id: rightArrow
+                    arrowtype: 'rightarrow'
 
                     anchors {
                         right: parent.right
                         top: parent.top
                         bottom: parent.bottom
+                        margins: 5
+                        verticalCenter: parent.Center
                     }
 
-                    width: 100
-                    height: 70
-
-                    Image {
-                        id: rightArrowImage
-
-                        anchors {
-                            right: parent.right
-                            rightMargin: (header.width / 7) / 2 - (width / 2)
-                            verticalCenter: parent.verticalCenter
-                        }
-
-                        width: height
-                        source: root.platformStyle.rightArrowImage
-                    }
+                    width: 20
+                    height: 65
 
                     MouseArea {
                         anchors.fill: parent
                         onPressed: {
-                            rightArrowImage.source = root.platformStyle.rightArrowPressedImage
+                            //rightArrowImage.source = root.platformStyle.rightArrowPressedImage
                         }
 
                         onReleased: {
-                            rightArrowImage.source = root.platformStyle.rightArrowImage
+                            //rightArrowImage.source = root.platformStyle.rightArrowImage
                             nextMonthAnimation.start()
                             dateModel.showNext()
                         }

@@ -58,6 +58,8 @@ QtObject {
     property color dayBGColor: '#FFFFFF'
     property color currentSelectedDayBGColor: '#EF5500'
 
+    property string arrowColor: '#EF5500'
+
     property int monthFontSize: 32
     property int dayNameFontSize: 18
     property int dayFontSize: 26
