@@ -1,4 +1,4 @@
-import QtQuick 1.1
+import QtQuick 2.0
 
 /*
 Copyright (c) 2011-2012, Vasiliy Sorokin <sorokin.vasiliy@gmail.com>
@@ -80,7 +80,7 @@ Item {
             to: wrapper.width
             duration: 75
 
-            onCompleted: {
+            onStopped: {
                 wrapper.x = 0
             }
         }
@@ -96,7 +96,7 @@ Item {
             to: -wrapper.width
             duration: 75
 
-            onCompleted: {
+            onStopped: {
                 wrapper.x = 0
             }
         }
