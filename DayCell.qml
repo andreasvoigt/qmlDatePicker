@@ -57,6 +57,20 @@ Item {
         return ""
     }
 
+    function backgroundColor() {
+        if (GridView.isCurrentItem) {
+            if (isCurrentDay) {
+                return platformStyle.currentSelectedDayBGColor
+            } else {
+                return platformStyle.currentSelectedDayBGColor
+            }
+        } else if (isCurrentDay) {
+            return platformStyle.dayBGColor
+        } else {
+            return platformStyle.dayBGColor
+        }
+    }
+
     function eventImage() {
         if (GridView.isCurrentItem)
             return platformStyle.selectedDayEventImage
@@ -69,11 +83,13 @@ Item {
         return platformStyle.eventImage
     }
 
-    Image {
+    Rectangle {
         id: background
-        anchors.centerIn: parent
+        color: backgroundColor()
+        radius: 5
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.fill: parent
 
-        source: dayCell.background()
         Text {
             id: label
             anchors.centerIn: parent
