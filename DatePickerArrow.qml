@@ -38,11 +38,26 @@ Item {
             lHighX = aCanvas.width - lMargin,
             lLowY = lMargin,
             lMidY = Math.round(aCanvas.height / 2),
-            lHighY = aCanvas.height - lMargin;
+            lHighY = aCanvas.height - lMargin,
+            lState = aCanvas.state || 0,
+            lColor;
 
+        switch (lState) {
+        case 0:
+            lColor = platformStyle.arrowColor;
+            break;
+        case 1:
+            lColor = platformStyle.arrowColorHl;
+            break;
+        default:
+            lColor = platformStyle.arrowColor;
+            break;
+        }
+
+        lGC.clearRect(0, 0, aCanvas.width, aCanvas.height);
         lGC.lineWidth = lLW;
         lGC.lineCap = 'round';
-        lGC.strokeStlye = platformStyle.arrowColor;
+        lGC.strokeStyle = lColor;
         lGC.beginPath();
         if (arrowtype === 'leftarrow') {
             lGC.moveTo(lHighX, lLowY);
@@ -58,10 +73,29 @@ Item {
         lGC.stroke();
     }
 
+    MouseArea {
+        anchors.fill: parent
+        hoverEnabled: true
+        onEntered: {
+            arrowCanvas.state = 1;
+            arrowCanvas.requestPaint();
+        }
+        onExited: {
+            arrowCanvas.state = 0;
+            arrowCanvas.requestPaint();
+        }
+    }
+
     Canvas {
         id: arrowCanvas
-        anchors.fill: parent
+        anchors {
+            fill: parent
+            topMargin: 15
+            bottomMargin: 15
+        }
         antialiasing: true
+
+        property int state: 0
 
         onPaint: parent.paintArrow(this)
     }

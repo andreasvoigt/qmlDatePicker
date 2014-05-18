@@ -125,8 +125,8 @@ Item {
                         left: parent.left
                         top: parent.top
                         bottom: parent.bottom
-                        margins: 5
                         verticalCenter: parent.Center
+                        margins: 5
                     }
 
                     width: 20
@@ -163,8 +163,8 @@ Item {
                         right: parent.right
                         top: parent.top
                         bottom: parent.bottom
-                        margins: 5
                         verticalCenter: parent.Center
+                        margins: 5
                     }
 
                     width: 20
