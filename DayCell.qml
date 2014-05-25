@@ -93,7 +93,7 @@ Item {
         Text {
             id: label
             anchors.centerIn: parent
-            font.pixelSize: dayCell.platformStyle.dayFontSize
+            font.pixelSize: dayCell.platformStyle.fsDay
             color: dayCell.color()
             font.weight: (dayCell.isCurrentDay || dayCell.GridView.isCurrentItem) ? Font.Bold : Font.Light
             text: dayCell.dateOfDay.getDate()
@@ -106,7 +106,7 @@ Item {
             }
 
             visible: hasEventDay
-            source: dayCell.eventImage()
+            //source: dayCell.eventImage()
         }
     }
 }
