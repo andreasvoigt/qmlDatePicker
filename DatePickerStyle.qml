@@ -57,22 +57,22 @@ QtObject {
     id: style
 
     property string orientationString: "portrait"
-    property string backgroundImage: "image://theme/meegotouch-calendar-monthgrid-background-" + orientationString
-    property string currentDayImage: "image://theme/meegotouch-monthgrid-daycell-current-day-" + orientationString
-    property string selectedDayImage: "image://theme/meegotouch-monthgrid-daycell-selected-day-" + orientationString
-    property string currentSelectedDayImage: "image://theme/meegotouch-monthgrid-daycell-selected-day-current-" + orientationString
+//    property string backgroundImage: "image://theme/meegotouch-calendar-monthgrid-background-" + orientationString
+//    property string currentDayImage: "image://theme/meegotouch-monthgrid-daycell-current-day-" + orientationString
+//    property string selectedDayImage: "image://theme/meegotouch-monthgrid-daycell-selected-day-" + orientationString
+//    property string currentSelectedDayImage: "image://theme/meegotouch-monthgrid-daycell-selected-day-current-" + orientationString
 
-    property string leftArrowImage: "image://theme/meegotouch-calendar-monthgrid-previousbutton"
-    property string leftArrowPressedImage: "image://theme/meegotouch-calendar-monthgrid-previousbutton-pressed"
-    property string rightArrowImage: "image://theme/meegotouch-calendar-monthgrid-nextbutton"
-    property string rightArrowPressedImage: "image://theme/meegotouch-calendar-monthgrid-nextbutton-pressed"
+//    property string leftArrowImage: "image://theme/meegotouch-calendar-monthgrid-previousbutton"
+//    property string leftArrowPressedImage: "image://theme/meegotouch-calendar-monthgrid-previousbutton-pressed"
+//    property string rightArrowImage: "image://theme/meegotouch-calendar-monthgrid-nextbutton"
+//    property string rightArrowPressedImage: "image://theme/meegotouch-calendar-monthgrid-nextbutton-pressed"
 
 
-    property string eventImage: "image://theme/meegotouch-monthgrid-daycell-regular-day-eventindicator"
-    property string weekEndEventImage: "image://theme/meegotouch-monthgrid-daycell-regular-weekend-day-eventindicator"
-    property string currentDayEventImage: "image://theme/meegotouch-monthgrid-daycell-current-day-eventindicator"
-    property string selectedDayEventImage: "image://theme/meegotouch-monthgrid-daycell-selected-day-eventindicator"
-    property string otherMonthEventImage: "image://theme/meegotouch-monthgrid-daycell-othermonth-day-eventindicator"
+//    property string eventImage: "image://theme/meegotouch-monthgrid-daycell-regular-day-eventindicator"
+//    property string weekEndEventImage: "image://theme/meegotouch-monthgrid-daycell-regular-weekend-day-eventindicator"
+//    property string currentDayEventImage: "image://theme/meegotouch-monthgrid-daycell-current-day-eventindicator"
+//    property string selectedDayEventImage: "image://theme/meegotouch-monthgrid-daycell-selected-day-eventindicator"
+//    property string otherMonthEventImage: "image://theme/meegotouch-monthgrid-daycell-othermonth-day-eventindicator"
 
     property color weekEndColor: "#EF5500"
     property color weekDayColor: "#8C8C8C"
@@ -88,7 +88,11 @@ QtObject {
     property string arrowColor: '#8C8C8C'
     property string arrowColorHl: '#EF5500'
 
-    property int monthFontSize: 32
-    property int dayNameFontSize: 18
-    property int dayFontSize: 26
+    property string cToday: '#000000'
+    property string cTodayHl: '#EF5500'
+
+    property int fsMonth: 32
+    property int fsTodayButton: 18
+    property int fsDayName: 18
+    property int fsDay: 26
 }
