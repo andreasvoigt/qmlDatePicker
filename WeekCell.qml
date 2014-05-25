@@ -38,7 +38,7 @@ Item {
     Text {
         id: label
         anchors.centerIn: parent
-        font.pixelSize: weekCell.platformStyle.dayNameFontSize
+        font.pixelSize: weekCell.platformStyle.fsDayName
         color: weekCell.isWeekEnd ? weekCell.platformStyle.weekEndColor : weekCell.platformStyle.weekDayColor
         font.bold: true
     }
